@@ -4,12 +4,8 @@ import { useEffect } from "react";
 
 export default function ClientEffects() {
   useEffect(() => {
-    // ── THEME INIT ──
-    const html = document.documentElement;
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || "dark";
-    html.setAttribute("data-theme", initialTheme);
+    // ── THEME: always dark ──
+    document.documentElement.setAttribute("data-theme", "dark");
 
     // ── FONT LOADING ──
     let fontsLoaded = false;
