@@ -8,7 +8,7 @@ export default function ClientEffects() {
     const html = document.documentElement;
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+    const initialTheme = savedTheme || "dark";
     html.setAttribute("data-theme", initialTheme);
 
     // ── FONT LOADING ──
